@@ -1,0 +1,297 @@
+/* VARIABLE DECLARATION */
+@font-face {
+  font-family: 'netflix-title';
+  src: url('/netflix-cm-jq/outher/netflix-shadow/@font-face/ab83b275830b2d585ea027c47e3b237a.woff2') format('truetype');
+}
+@font-face{
+  font-family: 'netflix';
+  src: url('') format('truetype');
+}
+:root{
+  --vermelho: #e50914;
+  --preto: #141414;
+  --text-color: #aaa;
+  --text-houver: #fff;
+  --font-netflix: netflix-title;
+  --font-netflix2: netflix;
+}
+/* END OF DECLARATION */
+/* CLEANING OF THE WEBSITE */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-decoration-style: none;
+  list-style-type: none;  
+}
+/* AND OF CLEANING */
+
+                                              /* ******************************  */
+
+
+/* HEADER OF THE WEBSITE */
+
+.base{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+body{
+  background: var(--preto);
+  color: white;
+  font-family: netflix;
+}
+
+header{
+  z-index: 3;
+  background: rgba(0,0,0,.91);
+  width: 100%;
+  height: 10vh;
+ 
+}
+header > .container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+  
+}
+header > .container > nav > .netflix{
+  font-family: netflix-title;
+  font-weight: 500;  
+  font-size: 40px;
+  color: var(--vermelho);
+  vertical-align: middle;
+  
+}
+header > .container > nav > .netflix{
+  display: flex;
+  flex-direction: row; 
+  padding-left: 25px;
+  cursor: pointer;
+}
+.netflix {
+  width: 20px;
+  height: 25px;
+}
+.nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+#subIcon {
+  margin-left: 9em;
+}
+#subIcon > a{
+  color: var(--text-color);
+  margin-right: 17px;  
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+#subIcon > a:hover{
+  color: var(--text-houver);
+}
+#boxIcon{display:none;}
+
+.subNav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.subNav > .icons{
+  color: var(--text-houver);
+  font-size: 25px;
+  margin-right: 10px;
+  cursor: pointer;  
+}
+.subNav .text-nav > a{
+  font-size: 15px;
+  color: var(--text-color);
+  font-weight: 600;
+  margin-right: 20px;
+  margin-left: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.text-nav a:hover{
+  color: var(--text-houver)
+}
+.subNav .incoUserIcon img{
+  width: 35px;
+  border-radius: 4px;
+  margin-left:20px;
+  cursor: pointer;
+}
+.incoUserIcon{
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  cursor: pointer;  
+}
+#arrow{
+  margin-right: 60px;
+  margin-left: 10px;
+  font-size: 15px;
+}
+/* END OF THE DECLARATION */
+
+/* STARTING THE WEBSITE BODY */
+main{
+  z-index: 0;
+  margin-bottom: 10px;
+}
+.filme_principal {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/img/Shang-Chi.jpg' ),no-repeat;
+  width:100%; 
+  background-size: cover;
+  height: 100vh;
+  justify-content: center;
+  align-items: flex-start;
+
+}
+.filme_principal > .container{
+  height: 100vh;
+  width: 80vw;
+  margin-top: 60vh;
+  margin-left: 20px;  
+}
+.filme_principal .decoration{
+  margin-bottom: 40px;
+}
+.title{
+  font-size: 40px;
+  width: 10em;
+  margin-left: 30px;
+  margin-bottom: 30px;
+  font-family: var(--font-netflix2);
+}
+.bg{
+  padding:  0px 30px;  
+  height: 3em;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;  
+
+}
+.bg-content{
+  margin-left: 2em;
+  width: 100%;
+  
+}
+.bg-content:first-child{
+  width: 5em;
+  color: var(--preto);
+  background:#ffff;margin-left: 10px;
+}
+.bg:first-child:hover{
+  background:#BFC1C2;
+  opacity: 80%;
+}
+.bg > i {
+  text-align: center;
+  margin-right: 0.5rem;
+}
+
+#second{
+  background: #4C5051;
+  width: 30%;
+  color:white;
+  margin-left: 10px;
+}
+
+#second:hover{
+  background: rgb(43, 51, 52);
+  opacity: 80%;
+}
+.menu2{
+  display: none;
+}
+
+
+
+/*                            RESPONSIVIDADE DO CÓDIGO */
+
+
+@media  (max-width: 874px){
+
+  #subIcon{
+    display:none;
+  }
+  #boxIcon{
+    display: none;
+    flex-direction: column;   
+    width: 230px;
+    height: 18em;
+    margin-left: 5em;    
+    position: absolute;
+    justify-content:center;
+    
+    
+  }
+  .menu2{
+    display: block;
+
+  }
+  .menu2 p{
+    margin-left: 8em;
+    margin-bottom: 0.5em;
+  }
+
+  #boxIcon a {
+    height: 13vh;    
+    color:white;
+    text-align: center;
+    padding-top: 15px;
+    background-color: rgba(0, 0, 0,0.9);
+    transition: 0,4;
+  }
+  #boxIcon a:hover{
+    background-color: rgba(0, 0, 0,0.8);
+  }
+  #arrow{display:none}
+  #second{
+    background: #4C5051;
+    width: 40%;
+    color:white;
+    margin-left: 10px;
+  }
+  .bg{
+    font-size: 10px;
+    font-weight: 400;
+  }
+  #bg-content{
+    font-size: 10px;
+  }
+  .incoUserIcon{
+    margin-right: 10px;
+  }
+  body > div.base > header{
+    height: 15vh;
+    width: 97.2vw;
+  }
+}
+@media  (max-height: 520px){
+  body > div.base > header{
+    height: 60px;
+    width: 100%;
+  }
+  .filme_principal{
+    height: 110vh;
+  }
+}
+#paulo > div > p{
+  font: 500 arial ;
+  width: 100%;
+  display: flex;
+  text-align: center;justify-content: center;
+  margin: 15px 0 15px 0;  
+}
